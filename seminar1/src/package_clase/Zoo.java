@@ -46,7 +46,7 @@ public class Zoo {
 		lista_animale.add(a);
 	}
 
-	private void feedAllAnimals() {
+	public void feedAllAnimals() {
 		for(Animal a :lista_animale) {
 			ingrijitor.feed(a);
 		}
