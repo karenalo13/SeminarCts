@@ -20,7 +20,7 @@ public class Animal {
 	}
 	public void setGreutate(float greutate) {
 		this.greutate = greutate;
-	}
+	}   
 
 	
 	
