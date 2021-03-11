@@ -42,7 +42,7 @@ public abstract class Aplicant{
 	}
 	
 	
-	
+	public abstract float getSumaFinantare();
 	
 
 	
