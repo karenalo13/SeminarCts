@@ -5,6 +5,8 @@ import java.util.List;
 
 import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
+import ro.ase.cts.clase.Proiect;
+import ro.ase.cts.clase.Student;
 import ro.ase.cts.readers.AplicantReader;
 import ro.ase.cts.readers.ReadAngajati;
 import ro.ase.cts.readers.ReadStudents;
@@ -23,12 +25,16 @@ public class Main {
 			List<Aplicant> listaAplicanti;
 			try {
 				listaAplicanti =citesteAplicanti(new ReadStudents("studenti.txt"));
-				for(Aplicant angajat:listaAplicanti)
+				for(Aplicant angajat:listaAplicanti) {
 					System.out.println(angajat.toString());
+					angajat.afiseazaStatus(new Proiect(80));
+				}
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			System.out.print(Angajat.getSmaFinantare());
+			System.out.print(Student.getSmaFinantare());
 		}
 		
 	
