@@ -38,7 +38,10 @@ public abstract class Aplicant{
 	}
 	public void setPunctaj(int punctaj) {
 		this.punctaj = punctaj;
+		
 	}
+	
+	
 	
 	
 
@@ -59,8 +62,10 @@ public abstract class Aplicant{
 	public int getNr_proiecte() {
 		return nr_proiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte) {
+	public void setNr_proiecte(int nr_proiecte,String[] vect) {
 		this.nr_proiecte = nr_proiecte;
+		this.denumireProiect=vect;
+		
 	}
 
 }

@@ -7,6 +7,7 @@ import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 import ro.ase.cts.readers.AplicantReader;
 import ro.ase.cts.readers.ReadAngajati;
+import ro.ase.cts.readers.ReadStudents;
 
 public class Main {
 
@@ -21,7 +22,7 @@ public class Main {
 		public static void main(String[] args) {
 			List<Aplicant> listaAplicanti;
 			try {
-				listaAplicanti =citesteAplicanti(new ReadAngajati("angajati.txt"));
+				listaAplicanti =citesteAplicanti(new ReadStudents("studenti.txt"));
 				for(Aplicant angajat:listaAplicanti)
 					System.out.println(angajat.toString());
 			} catch (FileNotFoundException e) {
