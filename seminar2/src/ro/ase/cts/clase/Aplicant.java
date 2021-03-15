@@ -34,9 +34,9 @@ public abstract class Aplicant {
 		this.varsta = varsta;
 	}
 
-	public void afiseazaStatus(Proiect p) {
-		System.out.println("Aplicantul " + nume + " " + prenume);
-		if (p.getPrag() > 80) {
+	public void afiseazaStatus(Proiect proiect) {
+		System.out.print("Aplicantul " + nume + " " + prenume);
+		if (proiect.getPrag() < punctaj) {
 			System.out.println(" a fost acceptat.");
 		} else {
 			System.out.println(" nu a fost acceptat.");
@@ -59,14 +59,14 @@ public abstract class Aplicant {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumireProiect) {
+	public Aplicant(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumiriProiecte) {
 		super();
 		this.nume = nume;
 		this.prenume = prenume;
 		this.varsta = varsta;
 		this.punctaj = punctaj;
-		this.nrProiecte = nr_proiecte;
-		this.denumiriProiecte = denumireProiect;
+		this.nrProiecte = nrProiecte;
+		this.denumiriProiecte = denumiriProiecte;
 	}
 
 	public int getNrProiecte() {

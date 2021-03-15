@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Student extends Aplicant {
 	protected String facultate;
-	protected int an_studii;
+	protected int anStudii;
 	private static float sumaFinantare=30;
 
 	public String getFacultate() {
@@ -16,11 +16,11 @@ public class Student extends Aplicant {
 	}
 
 	public int getAn_studii() {
-		return an_studii;
+		return anStudii;
 	}
 
 	public void setAn_studii(int an_studii) {
-		this.an_studii = an_studii;
+		this.anStudii = an_studii;
 	}
 
 	public Student() {
@@ -32,12 +32,12 @@ public class Student extends Aplicant {
 			String facultate, int an_studii) {
 		super(nume, prenume, varsta, punctaj, nr_proiecte, denumireProiect);
 		this.facultate = facultate;
-		this.an_studii = an_studii;
+		this.anStudii = an_studii;
 	}
 
 	@Override
 	public String toString() {
-		return "Student:" + super.toString() + "Facultate=" + facultate + ", An_studii=" + an_studii;
+		return "Student:" + super.toString() + "Facultate=" + facultate + ", An_studii=" + anStudii;
 	}
 
 	public int finantare() {

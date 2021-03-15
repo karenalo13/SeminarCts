@@ -23,9 +23,8 @@ public class Elev extends Aplicant{
 	
 	@Override
 	public String toString() {
-		return "Elev: Nume=" + nume + ", Prenume=" + prenume + ", Varsta="
-				+ varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte  + ", DenumireProiect="
-				+ Arrays.toString(denumireProiect) + "Clasa=" + clasa + ", Tutore=" + tutore;
+		return "Elev: " +super.toString()
+				+ "Clasa=" + clasa + ", Tutore=" + tutore;
 	}
 	
 	public Elev() {
@@ -46,11 +45,16 @@ public class Elev extends Aplicant{
 	}
 	@Override
 	public float getSumaFinantare() {
-		// TODO Auto-generated method stub
+		
 		return sumaFinantare ;
 	}
 	public static void setSumaFinantare(float sumaFinantare) {
 		Elev.sumaFinantare = sumaFinantare;
+	}
+	
+	public static float getSmaFinantare() {
+		
+		return sumaFinantare ;
 	}
 	
 	
