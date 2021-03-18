@@ -20,7 +20,7 @@ public class cabinetVeterinarLazy {
 			this.buget = buget;
 		}
 		// funtie publica si statica returneaza instanta;
-		public static cabinetVeterinarLazy getInstance(String nume, String adresa, int nrAngajati, float buget) {
+		public static synchronized cabinetVeterinarLazy getInstance(String nume, String adresa, int nrAngajati, float buget) {
 			if( instance==null)
 				instance =new cabinetVeterinarLazy(nume , adresa,nrAngajati, buget);
 							
@@ -31,6 +31,38 @@ public class cabinetVeterinarLazy {
 			return "cabinetVeterinar [nume=" + nume + ", adresa=" + adresa + ", nrAngajati=" + nrAngajati + ", buget="
 					+ buget + "]";
 		}
+		public String getNume() {
+			return nume;
+		}
+		public void setNume(String nume) {
+			this.nume = nume;
+		}
+		public String getAdresa() {
+			return adresa;
+		}
+		public void setAdresa(String adresa) {
+			this.adresa = adresa;
+		}
+		public int getNrAngajati() {
+			return nrAngajati;
+		}
+		public void setNrAngajati(int nrAngajati) {
+			this.nrAngajati = nrAngajati;
+		}
+		public float getBuget() {
+			return buget;
+		}
+		public void setBuget(float buget) {
+			this.buget = buget;
+		}
+		public static cabinetVeterinarLazy getInstance() {
+			return instance;
+		}
+		public static void setInstance(cabinetVeterinarLazy instance) {
+			cabinetVeterinarLazy.instance = instance;
+		}
+		
+		
 		
 		
 	
