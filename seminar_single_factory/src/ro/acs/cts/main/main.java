@@ -6,6 +6,10 @@ import ro.ase.cts.componente.CategoriiMedicamente;
 
 public class main {
 
+	public static CategoriiMedicamente getTipCategorie() {
+		return CategoriiMedicamente.raceala;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -16,6 +20,8 @@ public class main {
 			Categorie durere=fabrica.newCategorie(CategoriiMedicamente.durere,20);
 			System.out.println(durere.toString());
 			System.out.println(body.toString()); 
+			Categorie categorie = fabrica.newCategorie(getTipCategorie(), 30f);
+			System.out.println(categorie.toString());
 		}
 		catch(Exception e )
 		{
