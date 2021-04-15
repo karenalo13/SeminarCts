@@ -13,8 +13,8 @@ public class Main {
 		
 		FabricaRezervari fabrica = new FabricaRezervari();
 		
-		fabrica.getClient("oana@gmail.com").afisareInformatii(rezervare1);
-		fabrica.getClient("oana@gmail.com").afisareInformatii(rezervare2);
+		fabrica.getClient("ion@gmail.com").afisareInformatii(rezervare1);
+		fabrica.getClient("ion@gmail.com").afisareInformatii(rezervare2);
 		Rezervare rezervare3 = new Rezervare(2,4,"17:00");
 		fabrica.getClient("email").afisareInformatii(rezervare3);
 	

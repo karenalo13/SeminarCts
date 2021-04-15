@@ -15,7 +15,7 @@ public class FabricaRezervari {
 	public FlyweightAbstract getClient(String email)
 	{
 		FlyweightAbstract client=clienti.get(email);
-		if(client!=null)
+		if(client==null)
 		{
 			client=new Client("Ciucurel","0838389394",email);
 			clienti.put(email,client);
