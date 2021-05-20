@@ -12,9 +12,10 @@ import org.junit.Test;
 import pachet.Student;
 
 public class StudentTest {
-
+	
 	@Before
 	public void setUp() throws Exception {
+	
 	}
 
 	@After
@@ -100,6 +101,33 @@ public class StudentTest {
 			}
 		
 		
+	}
+	
+	@Test
+	public void testVerificaRestanta() {
+		Student student=new Student();
+		int nota1=8;
+		int nota2=3;
+		int nota3=8;
+		student.adaugaNota(nota1);
+		student.adaugaNota(nota2);
+		student.adaugaNota(nota3);
+		
+		assertTrue(student.areRestante()) ;
+	}
+	
+	
+	@Test
+	public void testVerificaRestantaFalse() {
+		Student student=new Student();
+		int nota1=8;
+		int nota2=6;
+		int nota3=8;
+		student.adaugaNota(nota1);
+		student.adaugaNota(nota2);
+		student.adaugaNota(nota3);
+		
+		assertFalse(student.areRestante()) ;
 	}
 	
 	
