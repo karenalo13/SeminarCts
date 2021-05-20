@@ -45,6 +45,63 @@ public class StudentTest {
 		
 	}
 	
+	@Test
+	public void testMedie() {
+		Student student=new Student();
+		int nota=8;
+		student.adaugaNota(nota);
+		assertEquals(8f,student.calculeazaMedie(),0.001f);
+		
+	}
+	
+	@Test
+	public void testMedieMultipleNote() {
+		Student student=new Student();
+		int nota=8;
+		int nota2=9;
+		student.adaugaNota(nota);
+		student.adaugaNota(nota2);
+		assertEquals(8.5f,student.calculeazaMedie(),0.001f);
+		
+	}
+	
+	
+	@Test
+	public void testMedieFaraNote() {
+		Student student=new Student();
+		assertEquals(0f,student.calculeazaMedie(),0.001f);
+		
+	}
+	
+	@Test (expected=IndexOutOfBoundsException.class)
+	public void testVerificaGetNota() {
+		Student student=new Student();
+		int nota=8;
+		int nota2=9;
+		student.adaugaNota(nota);
+		student.adaugaNota(nota2);
+		assertEquals(nota,student.getNota(-1)) ;
+		
+	}
+	
+	
+	
+	@Test 
+	public void testVerificaGetNotaJU3() {
+		Student student=new Student();
+		int nota=8;
+		
+		student.adaugaNota(nota);
+		
+		try { int s=student.getNota(-1) ;
+		fail("Aici nu trebuie sa ajungem");}
+			catch(IndexOutOfBoundsException eroare) {
+				
+			}
+		
+		
+	}
+	
 	
 	
 	
