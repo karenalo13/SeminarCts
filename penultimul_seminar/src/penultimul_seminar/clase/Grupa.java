@@ -53,6 +53,10 @@ public class Grupa {
 	public void setNrGrupa(int nrGrupa) {
 		this.nrGrupa = nrGrupa;
 	}
+	public List<IStudent> getListaStudenti() {
+		return this.studenti;
+	}
+	
     
     
 }
